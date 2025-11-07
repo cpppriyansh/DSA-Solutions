@@ -1,0 +1,18 @@
+class Solution {
+public:
+    bool isPowerOfFour(int n) {
+        //base case
+        if(n == 1){
+            return true;
+        }
+
+        //process
+        if(n==0 || n%4 != 0){
+            return false;
+        }
+        
+        //Recursion sambhal lenga
+        return isPowerOfFour(n/4);
+
+    }
+};
