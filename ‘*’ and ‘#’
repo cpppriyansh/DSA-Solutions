@@ -1,0 +1,31 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string s = "*#*#*";
+    int star = 0;
+    int hash = 0;
+    
+    for(int i = 0; i<s.length(); i++){
+        if(s[i] == '*'){
+            star++;
+        }
+        else{
+            hash++;
+        }
+    }
+    int answer = star - hash;
+    if(answer<0){
+        cout<<answer<<" the hash.";
+    }
+    else if(answer>0){
+        cout<<"+"<<answer<<" the hash.";
+    }
+    else{
+        cout<<"It's Perfect";
+    }
+    
+    return 0;
+}
