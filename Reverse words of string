@@ -1,0 +1,28 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    string s ="Hello World TCS";
+    string ans = "",b= "";
+    
+    for(int i = 0; i<s.length(); i++){
+        if(s[i] == ' ' ){
+            reverse(b.begin(), b.end());
+            b = b + " ";
+            ans = ans + b;
+            b = "";
+        }
+        else{
+            b = b + s[i];
+        }
+    }
+    
+    reverse(b.begin(), b.end());
+    ans = ans + b;
+    
+    cout<<ans;
+
+    return 0;
+}
