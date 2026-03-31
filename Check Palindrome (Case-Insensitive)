@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string s ="Race car";
+    string ans = "";
+    bool yon = true;
+    
+    for(int i = 0; i<s.length(); i++){
+        if(s[i] == ' '){
+        ans += tolower(s[i]);
+        }
+    }
+    
+    for(int i = 0; i<ans.length(); i++){
+        if(ans[ans.length()-(i+1)] != ans[i]){
+            yon = false;
+        }
+    }
+    
+    if(yon == true){
+        cout<<"true";
+    }else{
+        cout<<"false";
+    }
+
+    return 0;
+}
